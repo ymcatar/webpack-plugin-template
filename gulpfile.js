@@ -1,5 +1,6 @@
-var gulp = require("gulp");
-var babel = require("gulp-babel");
+var gulp = require('gulp');
+var babel = require('gulp-babel');
+var clean = require('gulp-clean');
 
 gulp.task('babel', function () {
   return gulp.src('src/**/*.js')
@@ -12,6 +13,11 @@ gulp.task('html', function () {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('clean', function () {
+  return gulp.src('dist/**/*.*', { read: false, force: true })
+    .pipe(clean());
+});
+
 gulp.task('default', function () {
-  return gulp.start(['babel', 'html']);
+  return gulp.start(['babel', 'html', 'clean']);
 });
