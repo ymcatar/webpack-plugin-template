@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a webpack plugin template",
   "main": "dist/index.js",
+  "private": true,
   "scripts": {
     "test": "gulp && mocha dist/test",
     "build": "gulp"
