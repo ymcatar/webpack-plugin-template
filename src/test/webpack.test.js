@@ -17,7 +17,7 @@ describe('webpack environment', () => {
       },
       plugins: [
         new CleanWebpackPlugin([path.resolve(__dirname, 'dist')]),
-        new Plugin()
+        new Plugin() /* <---- */
       ]
     });
   });

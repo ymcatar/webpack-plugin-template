@@ -29,7 +29,8 @@ describe('webpack environment', function () {
         path: _path2.default.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
       },
-      plugins: [new _cleanWebpackPlugin2.default([_path2.default.resolve(__dirname, 'dist')]), new _index2.default()]
+      plugins: [new _cleanWebpackPlugin2.default([_path2.default.resolve(__dirname, 'dist')]), new _index2.default() /* <---- */
+      ]
     });
   });
 
