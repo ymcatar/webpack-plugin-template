@@ -1,11 +1,9 @@
-function Plugin(opts) {
-  // access to opts ...
+export default class Plugin {
+  constructor(opts) {
+    // access to opts ...
+  }
+
+  apply(compiler) {
+    // plugin code here ...
+  }
 }
-
-Plugin.prototype.apply = compiler => {
-  compiler.plugin('compilation', compilation => {
-    // console.log(compilation);
-  });
-};
-
-module.exports = Plugin;

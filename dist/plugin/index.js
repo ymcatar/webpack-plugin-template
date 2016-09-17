@@ -1,13 +1,33 @@
-'use strict';
+"use strict";
 
-function Plugin(opts) {
-  // access to opts ...
-}
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-Plugin.prototype.apply = function (compiler) {
-  compiler.plugin('compilation', function (compilation) {
-    // console.log(compilation);
-  });
-};
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
 
-module.exports = Plugin;
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Plugin = function () {
+  function Plugin(opts) {
+    // access to opts ...
+
+    (0, _classCallCheck3.default)(this, Plugin);
+  }
+
+  (0, _createClass3.default)(Plugin, [{
+    key: "apply",
+    value: function apply(compiler) {
+      // plugin code here ...
+    }
+  }]);
+  return Plugin;
+}();
+
+exports.default = Plugin;
